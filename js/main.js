@@ -1,9 +1,10 @@
 /**
  * Personal Website - Interactive Logic & UI Handlers
- * Theme toggle, Portfolio filter, Mobile menu, Scroll reveal, Contact form
+ * Language toggle (i18n), Theme toggle, Portfolio filter, Mobile menu, Scroll reveal, Contact form
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initLanguage();
   initTheme();
   initMobileMenu();
   initScrollEffects();
@@ -12,7 +13,83 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* --------------------------------------------------------------------------
-   1. Theme Toggle (Light / Dark Mode)
+   1. Language Switcher (中英文双语切换 i18n)
+   -------------------------------------------------------------------------- */
+let currentLang = 'zh';
+
+function initLanguage() {
+  const langToggleBtn = document.getElementById('lang-toggle');
+  
+  // Retrieve saved language preference or detect browser language
+  const savedLang = localStorage.getItem('lang');
+  if (savedLang && (savedLang === 'zh' || savedLang === 'en')) {
+    currentLang = savedLang;
+  } else {
+    const userPrefersEn = navigator.language && navigator.language.toLowerCase().startsWith('en');
+    currentLang = userPrefersEn ? 'en' : 'zh';
+  }
+
+  // Apply initial language
+  applyLanguage(currentLang);
+
+  if (!langToggleBtn) return;
+
+  // Toggle on click
+  langToggleBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('lang', currentLang);
+    applyLanguage(currentLang);
+  });
+}
+
+function applyLanguage(lang) {
+  if (typeof translations === 'undefined' || !translations[lang]) return;
+
+  const dict = translations[lang];
+  document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+
+  // Update elements with data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) {
+      el.innerHTML = dict[key];
+    }
+  });
+
+  // Update input/textarea placeholders with data-i18n-placeholder
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (dict[key] !== undefined) {
+      el.setAttribute('placeholder', dict[key]);
+    }
+  });
+
+  // Update element titles/tooltips with data-i18n-title
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const key = el.getAttribute('data-i18n-title');
+    if (dict[key] !== undefined) {
+      el.setAttribute('title', dict[key]);
+    }
+  });
+
+  // Update the language toggle button appearance
+  const langToggleBtn = document.getElementById('lang-toggle');
+  if (langToggleBtn) {
+    const nextLangText = lang === 'zh' ? 'EN' : '中';
+    const nextLangTitle = dict['lang.title'] || (lang === 'zh' ? 'Switch to English' : '切换为中文');
+    
+    langToggleBtn.setAttribute('title', nextLangTitle);
+    langToggleBtn.setAttribute('aria-label', nextLangTitle);
+    
+    const langSpan = langToggleBtn.querySelector('.lang-curr');
+    if (langSpan) {
+      langSpan.textContent = nextLangText;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. Theme Toggle (Light / Dark Mode)
    -------------------------------------------------------------------------- */
 function initTheme() {
   const themeToggleBtn = document.getElementById('theme-toggle');
@@ -21,11 +98,11 @@ function initTheme() {
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const savedTheme = localStorage.getItem('theme');
 
-  // Apply stored theme or system preference
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  } else {
+  // Apply stored theme or default to dark (NYU Red & Black looks best in dark)
+  if (savedTheme === 'light') {
     document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
   }
 
   // Toggle on click
@@ -39,7 +116,7 @@ function initTheme() {
 }
 
 /* --------------------------------------------------------------------------
-   2. Mobile Navigation Menu
+   3. Mobile Navigation Menu
    -------------------------------------------------------------------------- */
 function initMobileMenu() {
   const menuToggle = document.getElementById('menu-toggle');
@@ -72,7 +149,7 @@ function initMobileMenu() {
 }
 
 /* --------------------------------------------------------------------------
-   3. Scroll Effects & Active Nav Highlighting
+   4. Scroll Effects & Active Nav Highlighting
    -------------------------------------------------------------------------- */
 function initScrollEffects() {
   // Reveal elements on scroll
@@ -123,7 +200,7 @@ function initScrollEffects() {
 }
 
 /* --------------------------------------------------------------------------
-   4. Portfolio Category Filtering
+   5. Portfolio Category Filtering
    -------------------------------------------------------------------------- */
 function initPortfolioFilter() {
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -133,7 +210,6 @@ function initPortfolioFilter() {
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Toggle active button
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -143,13 +219,12 @@ function initPortfolioFilter() {
         const category = card.getAttribute('data-category');
         if (filterValue === 'all' || category === filterValue || (category && category.includes(filterValue))) {
           card.classList.remove('hide');
-          // Add a subtle entrance animation
           card.style.opacity = '0';
-          card.style.transform = 'scale(0.95)';
+          card.style.transform = 'scale(0.96)';
           setTimeout(() => {
             card.style.opacity = '1';
             card.style.transform = 'scale(1)';
-          }, 50);
+          }, 40);
         } else {
           card.classList.add('hide');
         }
@@ -159,7 +234,7 @@ function initPortfolioFilter() {
 }
 
 /* --------------------------------------------------------------------------
-   5. Contact Form Handler & Toast Notification
+   6. Contact Form Handler & Toast Notification
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const contactForm = document.getElementById('contact-form');
@@ -170,22 +245,23 @@ function initContactForm() {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn ? submitBtn.innerText : '发送消息';
+    const submitBtn = contactForm.querySelector('button[type="submit"] span');
+    const dict = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang] : null;
+
+    const originalText = submitBtn ? submitBtn.innerText : (currentLang === 'zh' ? '发送消息' : 'Send Message');
+    const sendingText = dict ? dict['contact.form_sending'] : (currentLang === 'zh' ? '正在发送...' : 'Sending...');
+    const successText = dict ? dict['contact.form_success'] : (currentLang === 'zh' ? '🎉 消息已成功发送，感谢您的来信！' : '🎉 Message sent successfully! Thank you for reaching out.');
 
     if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.innerText = '正在发送...';
+      submitBtn.innerText = sendingText;
     }
 
-    // Simulate sending action (or you can integrate with Formspree / EmailJS)
     setTimeout(() => {
       contactForm.reset();
       if (submitBtn) {
-        submitBtn.disabled = false;
         submitBtn.innerText = originalText;
       }
-      showToast('🎉 消息已成功发送，感谢您的来信！');
+      showToast(successText);
     }, 800);
   });
 
