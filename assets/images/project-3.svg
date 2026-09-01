@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091b29" />
+      <stop offset="100%" stop-color="#020b14" />
+    </linearGradient>
+    <linearGradient id="glow-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="ai-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <rect width="600" height="380" fill="url(#p3-bg)" />
+
+  <!-- Connecting Node Network -->
+  <g stroke="#0ea5e9" stroke-width="1.5" opacity="0.3">
+    <line x1="120" y1="180" x2="220" y2="110"/>
+    <line x1="120" y1="180" x2="220" y2="250"/>
+    <line x1="220" y1="110" x2="350" y2="140"/>
+    <line x1="220" y1="250" x2="350" y2="220"/>
+    <line x1="350" y1="140" x2="480" y2="190"/>
+    <line x1="350" y1="220" x2="480" y2="190"/>
+    <line x1="220" y1="110" x2="220" y2="250"/>
+    <line x1="350" y1="140" x2="350" y2="220"/>
+  </g>
+
+  <!-- Central Visual Matrix -->
+  <g transform="translate(300, 185)">
+    <!-- Outer Pulsing Rings -->
+    <circle r="120" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="10 8" opacity="0.4"/>
+    <circle r="90" fill="none" stroke="#14b8a6" stroke-width="2" stroke-dasharray="6 6" opacity="0.6"/>
+    <circle r="60" fill="#0f2942" stroke="url(#glow-teal)" stroke-width="3" filter="url(#ai-glow)"/>
+    
+    <!-- AI Spark Icon inside -->
+    <path d="M-15,-5 L0,-25 L15,-5 L35,0 L15,5 L0,25 L-15,5 L-35,0 Z" fill="#38bdf8" />
+  </g>
+
+  <!-- Node Dots -->
+  <circle cx="120" cy="180" r="8" fill="#38bdf8"/>
+  <circle cx="220" cy="110" r="10" fill="#2dd4bf"/>
+  <circle cx="220" cy="250" r="10" fill="#06b6d4"/>
+  <circle cx="350" cy="140" r="10" fill="#0ea5e9"/>
+  <circle cx="350" cy="220" r="10" fill="#2dd4bf"/>
+  <circle cx="480" cy="190" r="12" fill="#38bdf8"/>
+
+  <!-- Code/Data Overlay HUD -->
+  <g transform="translate(40, 290)">
+    <rect width="220" height="50" rx="8" fill="#0f172a" opacity="0.8" stroke="#334155" stroke-width="1"/>
+    <rect x="15" y="15" width="80" height="6" rx="3" fill="#38bdf8"/>
+    <rect x="15" y="28" width="140" height="5" rx="2" fill="#64748b"/>
+    <circle cx="195" cy="25" r="5" fill="#22c55e"/>
+  </g>
+
+  <g transform="translate(340, 40)">
+    <rect width="220" height="50" rx="8" fill="#0f172a" opacity="0.8" stroke="#334155" stroke-width="1"/>
+    <rect x="15" y="15" width="100" height="6" rx="3" fill="#2dd4bf"/>
+    <rect x="15" y="28" width="150" height="5" rx="2" fill="#64748b"/>
+    <circle cx="195" cy="25" r="5" fill="#38bdf8"/>
+  </g>
+</svg>

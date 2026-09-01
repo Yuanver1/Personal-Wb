@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatar-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="head-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#1e1b4b" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#avatar-grad)" />
+  
+  <!-- Decorative Ring -->
+  <circle cx="200" cy="200" r="175" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="3" stroke-dasharray="8 6"/>
+
+  <!-- Character / Avatar Silhouette -->
+  <g filter="url(#shadow)">
+    <!-- Body / Shoulders -->
+    <path d="M100,340 C100,270 145,240 200,240 C255,240 300,270 300,340 C270,365 235,380 200,380 C165,380 130,365 100,340 Z" fill="url(#head-grad)" />
+    <!-- Collar / Inner Accent -->
+    <path d="M165,245 L200,285 L235,245 C224,242 212,240 200,240 C188,240 176,242 165,245 Z" fill="#e2e8f0" />
+    <!-- Head -->
+    <circle cx="200" cy="160" r="65" fill="url(#head-grad)" />
+    <!-- Hair / Styling -->
+    <path d="M135,160 C135,115 160,95 200,95 C240,95 265,115 265,160 C265,130 250,110 200,110 C150,110 135,130 135,160 Z" fill="#334155" />
+    <!-- Glasses / Modern element -->
+    <rect x="155" y="145" width="35" height="24" rx="6" fill="none" stroke="#334155" stroke-width="4"/>
+    <rect x="210" y="145" width="35" height="24" rx="6" fill="none" stroke="#334155" stroke-width="4"/>
+    <line x1="190" y1="157" x2="210" y2="157" stroke="#334155" stroke-width="4"/>
+  </g>
+</svg>
