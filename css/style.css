@@ -19,15 +19,16 @@
   --border-color: rgba(226, 232, 240, 0.8);
   --border-hover: #cbd5e1;
   
-  --accent-primary: #4f46e5;
-  --accent-hover: #4338ca;
-  --accent-light: #e0e7ff;
-  --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #3b82f6 50%, #06b6d4 100%);
+  --accent-primary: #6d28d9;
+  --accent-hover: #5b21b6;
+  --accent-light: #ede9fe;
+  --accent-nyu: #57068c;
+  --accent-gradient: linear-gradient(135deg, #57068c 0%, #7c3aed 50%, #3b82f6 100%);
   --accent-gradient-secondary: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
   
-  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
-  --card-shadow-hover: 0 20px 30px -10px rgba(79, 70, 229, 0.15), 0 8px 12px -4px rgba(0, 0, 0, 0.06);
-  --header-bg: rgba(248, 250, 252, 0.8);
+  --card-shadow: 0 4px 20px -2px rgba(87, 6, 140, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  --card-shadow-hover: 0 20px 30px -10px rgba(109, 40, 217, 0.18), 0 8px 12px -4px rgba(0, 0, 0, 0.06);
+  --header-bg: rgba(248, 250, 252, 0.85);
   --modal-overlay: rgba(15, 23, 42, 0.6);
 
   --radius-sm: 8px;
@@ -42,27 +43,28 @@
 
 [data-theme="dark"] {
   /* Dark Theme */
-  --bg-primary: #0b0f19;
-  --bg-secondary: #111827;
-  --bg-card: rgba(17, 24, 39, 0.8);
-  --bg-card-hover: rgba(24, 33, 53, 0.95);
-  --bg-input: #1f2937;
+  --bg-primary: #0a0b12;
+  --bg-secondary: #121324;
+  --bg-card: rgba(18, 19, 36, 0.85);
+  --bg-card-hover: rgba(28, 30, 56, 0.95);
+  --bg-input: #1e2038;
   
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #64748b;
   
-  --border-color: rgba(30, 41, 59, 0.8);
-  --border-hover: #334155;
+  --border-color: rgba(49, 46, 129, 0.35);
+  --border-hover: #4338ca;
   
-  --accent-primary: #6366f1;
-  --accent-hover: #818cf8;
-  --accent-light: rgba(99, 102, 241, 0.15);
-  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #38bdf8 50%, #2dd4bf 100%);
+  --accent-primary: #8b5cf6;
+  --accent-hover: #a78bfa;
+  --accent-light: rgba(139, 92, 246, 0.18);
+  --accent-nyu: #8900e1;
+  --accent-gradient: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #38bdf8 100%);
   --accent-gradient-secondary: linear-gradient(135deg, #f43f5e 0%, #a855f7 100%);
   
-  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
-  --card-shadow-hover: 0 20px 35px -10px rgba(99, 102, 241, 0.25), 0 8px 12px -4px rgba(0, 0, 0, 0.2);
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 20px 35px -10px rgba(124, 58, 237, 0.3), 0 8px 12px -4px rgba(0, 0, 0, 0.25);
   --header-bg: rgba(11, 15, 25, 0.85);
   --modal-overlay: rgba(0, 0, 0, 0.8);
 }
