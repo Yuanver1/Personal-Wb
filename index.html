@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yuanver | 纽约大学 (NYU) 国际大一新生 · 个人主页 & 作品集</title>
   <meta name="description" content="Yuanver 的个人主页，纽约大学 (NYU) 国际大一新生，展示学术探索、校园经历、技术作品与联系方式。">
+  <!-- Google Fonts: Playfair Display for NYU Editorial Serif Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- =========================================================================
-       1. Navigation Bar (顶部导航栏)
+       1. Navigation Bar (顶部导航栏 - NYU 官网经典红黑风)
        ========================================================================= -->
   <header class="navbar">
     <div class="container nav-container">
@@ -23,9 +27,9 @@
       <nav class="nav-menu" id="nav-menu">
         <a href="#hero" class="nav-link active">首页</a>
         <a href="#about" class="nav-link">关于我</a>
-        <a href="#experience" class="nav-link">学习经历</a>
-        <a href="#portfolio" class="nav-link">作品集</a>
-        <a href="#skills" class="nav-link">技能特长</a>
+        <a href="#experience" class="nav-link">求学足迹</a>
+        <a href="#portfolio" class="nav-link">精选项目</a>
+        <a href="#skills" class="nav-link">专业技能</a>
         <a href="#contact" class="nav-link">联系方式</a>
       </nav>
 
@@ -61,7 +65,7 @@
   </header>
 
   <!-- =========================================================================
-       2. Hero Section (首屏个人介绍与问候)
+       2. Hero Section (首屏介绍与红黑光环头像)
        ========================================================================= -->
   <section class="hero-section" id="hero">
     <div class="hero-bg-glow"></div>
@@ -71,28 +75,32 @@
         <div class="hero-content">
           <div class="hero-badge">
             <span class="pulse-dot"></span>
-            <span>💜 纽约大学 NYU · 国际大一新生</span>
+            <span>New York University · Class of 2030</span>
           </div>
           
           <h1 class="hero-title">
-            你好，我是 <br>
+            In & of the City, <br>
             <span class="text-gradient">Yuanver</span> 🗽
           </h1>
+
+          <div class="hero-title-sub">
+            纽约大学国际大一新生 · 计算机与探索者
+          </div>
           
           <p class="hero-description">
-            纽约大学 (New York University) 2026/2030 届本科国际大一新生，坐标纽约曼哈顿与布鲁克林。热爱编程创造、跨文化探索与数字化产品构建，正在纽约这座充满机遇的城市开启大学新篇章。
+            来自中国的纽约大学国际本科新生，求学于纽约曼哈顿与布鲁克林。热爱编程创造、全栈架构与前沿科技探索，在多元文化与世界机遇的中心构建有温度的数字化产品。
           </p>
 
           <div class="hero-actions">
             <a href="#portfolio" class="btn btn-primary">
-              <span>探索我的项目</span>
+              <span>浏览精选项目</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
             <a href="#about" class="btn btn-secondary">
-              <span>了解我的故事</span>
+              <span>关于我的故事</span>
             </a>
           </div>
 
@@ -103,12 +111,12 @@
                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
               </svg>
             </a>
-            <a href="mailto:yuanver@nyu.edu" class="social-icon-link" title="发送邮件 (NYU / 个人)">
+            <a href="mailto:yuanver@nyu.edu" class="social-icon-link" title="发送邮件联系 (NYU / 个人)">
               <svg viewBox="0 0 24 24">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
               </svg>
             </a>
-            <a href="#contact" class="social-icon-link" title="联系我">
+            <a href="#contact" class="social-icon-link" title="在线留言">
               <svg viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
               </svg>
@@ -116,21 +124,22 @@
           </div>
         </div>
 
-        <!-- Personal Avatar & Decorative Float Badges -->
+        <!-- Personal Avatar (Custom Pixel Art Avatar with Red/Gold Halo) -->
         <div class="hero-image-wrapper">
+          <div class="avatar-halo-ring"></div>
+
           <div class="avatar-frame">
-            <!-- 替换此处 src 为您的个人照片路径，如 assets/images/my-photo.jpg -->
-            <img src="assets/images/avatar.svg" alt="Yuanver Avatar" class="avatar-img">
+            <img src="assets/images/avatar.jpg" alt="Yuanver Pixel Avatar" class="avatar-img">
           </div>
 
           <div class="floating-badge badge-top-right">
-            <span>💜</span>
-            <span>NYU Violet Pride</span>
+            <span>⚔️</span>
+            <span>NYU Freshman</span>
           </div>
 
           <div class="floating-badge badge-bottom-left">
-            <span>🗽</span>
-            <span>Based in New York</span>
+            <span>✨</span>
+            <span>New York City</span>
           </div>
         </div>
       </div>
@@ -138,27 +147,32 @@
   </section>
 
   <!-- =========================================================================
-       3. About Me Section (关于我与个人特质)
+       3. About Me Section (关于我 - 官方社论风格)
        ========================================================================= -->
   <section class="about-section" id="about">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">About Me</span>
-        <h2 class="section-title">求知若渴，在纽约探索科技与多元世界的交汇</h2>
-        <p class="section-subtitle">从跨国求学到校园实践，用代码记录成长与灵感</p>
+        <span class="section-tag">About Me / 关于我</span>
+        <h2 class="section-title">扎根纽约，探索学术与科技的无限可能</h2>
+        <p class="section-subtitle">“A Private University in the Public Service” —— 秉持严谨求知与世界公民视野</p>
       </div>
 
       <div class="about-grid reveal">
         <!-- Detailed Text -->
         <div class="about-text">
           <p>
-            Hello! 我是 <strong>Yuanver</strong>。作为一名刚踏入<strong>纽约大学 (NYU)</strong> 的国际大一新生，我带着对未知世界的好奇心与对计算机科学的热忱，来到了充满活力的纽约市。
+            Hello! 我是 <strong>Yuanver</strong>。作为一名刚踏入<strong>纽约大学 (NYU)</strong> 的国际大一本科生，我怀揣着对未知世界的好奇心与对计算机科学的热忱，跨越重洋来到纽约。
+          </p>
+          
+          <div class="about-quote">
+            “以代码为笔，以好奇心为墨，在曼哈顿与布鲁克林之间书写属于自己的成长故事。”
+          </div>
+
+          <p>
+            在华盛顿广场的林荫与布鲁克林科技走廊的熏陶下，我系统学习计算机核心基础与数理逻辑，同时乐于将理论转化为实操项目，用 Python、Web 与移动端技术打造解决真实痛点的效率工具。
           </p>
           <p>
-            在华盛顿广场公园的微风与布鲁克林科技氛围中，我正在系统学习计算机核心基础课程，同时乐于将课内知识与实际项目相结合，尝试用 Python、Web 与移动端技术解决留学生和身边朋友的真实需求。
-          </p>
-          <p>
-            跨越语言与文化的求学旅途赋予了我开阔的全球化视野与包容的心态。我非常期待在 NYU 结识来自世界各地的良师益友，积极参加黑客松 (Hackathons)、校园社团与各类科技探索活动！
+            跨越语言与文化的求学历程锻炼了我敏锐的国际视野与团队协作力。我热衷于参与黑客松 (Hackathons)、校园科技社团与国际生迎新活动，渴望在多元碰撞中持续突破自我。
           </p>
         </div>
 
@@ -167,22 +181,22 @@
           <div class="highlight-card">
             <span class="highlight-icon">🎓</span>
             <h3 class="highlight-title">学术与自驱</h3>
-            <p class="highlight-desc">扎实攻读计算机基础、算法与数学，注重理论与实操并重</p>
+            <p class="highlight-desc">攻读计算机科学核心、算法与微积分，追求逻辑的严谨与代码的美感</p>
           </div>
           <div class="highlight-card">
             <span class="highlight-icon">🌏</span>
             <h3 class="highlight-title">国际化视野</h3>
-            <p class="highlight-desc">中英双语流利沟通，拥抱多元文化碰撞与跨国团队协作</p>
+            <p class="highlight-desc">中英双语流利沟通，拥抱多元文化碰撞与跨国团队高效协同</p>
           </div>
           <div class="highlight-card">
             <span class="highlight-icon">💡</span>
             <h3 class="highlight-title">项目构建者</h3>
-            <p class="highlight-desc">热衷于解决生活中的实际小痛点，打造简洁好用的工具与产品</p>
+            <p class="highlight-desc">关注校园与留学生日常小痛点，用现代全栈技术打造简洁优雅的工具</p>
           </div>
           <div class="highlight-card">
             <span class="highlight-icon">🗽</span>
             <h3 class="highlight-title">纽约漫游者</h3>
-            <p class="highlight-desc">热爱探索 NYC 各大博物馆、科技 Meetup、书店与街头风光</p>
+            <p class="highlight-desc">沉浸于 NYC 各大博物馆、科技沙龙、独立书店与多元文化街区</p>
           </div>
         </div>
       </div>
@@ -190,23 +204,23 @@
       <!-- Stats Banner -->
       <div class="stats-banner reveal">
         <div class="stat-item">
-          <div class="stat-num">💜 NYU</div>
-          <div class="stat-label">纽约大学 · 大一在读</div>
+          <div class="stat-num">NYU</div>
+          <div class="stat-label">纽约大学 · 2026/2030 届新生</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">🗽 NYC</div>
+          <div class="stat-num">NYC</div>
           <div class="stat-label">坐标纽约曼哈顿 / 布鲁克林</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">100%</div>
-          <div class="stat-label">对求知与创造的满满热情</div>
+          <div class="stat-label">求知与实践的专注热情</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       4. Experience Section (个人经历与学习足迹)
+       4. Experience Section (求学足迹与时间轴)
        ========================================================================= -->
   <section class="experience-section" id="experience">
     <div class="container">
@@ -228,15 +242,15 @@
             <h3 class="timeline-title">本科在读 · 计算机科学 / 相关专业</h3>
             <div class="timeline-org">纽约大学 (New York University, NYU)</div>
             <ul class="timeline-details">
-              <li>大一核心课程涵盖计算机编程基础 (Python / Java)、微积分与离散数学基础。</li>
-              <li>积极参与校内科技俱乐部 (Tech Clubs)、新生黑客松 (Freshman Hackathon) 与国际生迎新活动。</li>
-              <li>在多元文化环境中锻炼跨学科沟通与英文学术写作表达能力。</li>
+              <li>系统修读大一计算机核心课程：程序设计基础 (Python / Java)、微积分与离散数学。</li>
+              <li>积极融入校内科技社团 (Tech Clubs)、新生黑客松 (Freshman Hackathon) 与国际生学术交流沙龙。</li>
+              <li>在全英文学术环境中锤炼高阶批判性思维、学术论文阅读与技术演讲能力。</li>
             </ul>
             <div class="timeline-tags">
               <span class="timeline-tag">NYU 华盛顿广场</span>
               <span class="timeline-tag">Python & Java</span>
-              <span class="timeline-tag">数据与算法基础</span>
-              <span class="timeline-tag">黑客松实践</span>
+              <span class="timeline-tag">算法与数理基础</span>
+              <span class="timeline-tag">黑客松竞赛</span>
             </div>
           </div>
         </div>
@@ -249,18 +263,18 @@
               <span class="timeline-period">2023 - 2026</span>
               <span class="timeline-location">高中阶段 / 国际部</span>
             </div>
-            <h3 class="timeline-title">高中学历 & 校园科技社团负责人</h3>
-            <div class="timeline-org">重点高中 · 国际化高中课程</div>
+            <h3 class="timeline-title">高中学历 & 校园科技社团创办人</h3>
+            <div class="timeline-org">重点中学 · 国际化高中课程</div>
             <ul class="timeline-details">
-              <li>创立/组织高中计算机编程兴趣小组，带领团队开展算法研讨与网页设计入门分享。</li>
-              <li>参加国内外高中生计算机竞赛与数学建模竞赛，积累了扎实的数理思维与逻辑推理底子。</li>
-              <li>自学前端 HTML/CSS/JS 与全栈开发技术，独立完成多个个人作品并在 GitHub 开源。</li>
+              <li>创办高中编程兴趣俱乐部，组织开展多期算法入门与 Web 开发新手工作坊。</li>
+              <li>积极参加高中生计算机与数学建模竞赛，积累了扎实的数理逻辑底蕴与团队协作经验。</li>
+              <li>自学现代 Web 前端技术链，独立完成多个个人作品并在 GitHub 开源分享。</li>
             </ul>
             <div class="timeline-tags">
-              <span class="timeline-tag">AP / IB / 竞赛课程</span>
+              <span class="timeline-tag">国际课程 (AP/IB)</span>
               <span class="timeline-tag">社团领导力</span>
-              <span class="timeline-tag">Web 前端入门</span>
-              <span class="timeline-tag">自学与探索</span>
+              <span class="timeline-tag">Web 前端技术</span>
+              <span class="timeline-tag">自驱动力</span>
             </div>
           </div>
         </div>
@@ -274,15 +288,15 @@
               <span class="timeline-location">个人项目 & 志愿活动</span>
             </div>
             <h3 class="timeline-title">独立开发者 & 校园互助志愿者</h3>
-            <div class="timeline-org">开源社区与校际互助网络</div>
+            <div class="timeline-org">开源社区与校友互助网络</div>
             <ul class="timeline-details">
-              <li>为高中同学与新生开发了轻量级选课助手与课表提醒小工具，获得百余名同学使用好评。</li>
-              <li>参与社区志愿翻译与朋辈学习辅导，热心解答低年级同学关于升学与编程入门的疑问。</li>
+              <li>为高中同学与新生开发了轻量级选课助手与课表提醒小工具，获得广泛好评。</li>
+              <li>参与社区志愿翻译与朋辈升学答疑辅导，热心分享学习方法与编程心得。</li>
             </ul>
             <div class="timeline-tags">
-              <span class="timeline-tag">开源贡献</span>
+              <span class="timeline-tag">开源项目</span>
               <span class="timeline-tag">用户体验反馈</span>
-              <span class="timeline-tag">朋辈导师互助</span>
+              <span class="timeline-tag">朋辈导师</span>
             </div>
           </div>
         </div>
@@ -296,9 +310,9 @@
   <section class="portfolio-section" id="portfolio">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">我的精选项目与作品集</h2>
-        <p class="section-subtitle">结合校园生活、纽约日常与个人兴趣构建的实用工具与探索</p>
+        <span class="section-tag">Selected Projects</span>
+        <h2 class="section-title">精选作品集与实战项目</h2>
+        <p class="section-subtitle">结合校园生活、纽约日常与前沿技术构建的实用数字化工具</p>
       </div>
 
       <!-- Filter Buttons -->
@@ -321,13 +335,13 @@
           <div class="project-body">
             <h3 class="project-title">NYU Compass - 新生校园生活助手</h3>
             <p class="project-desc">
-              专为纽约大学国际新生打造的互动式导航与生活指南，整合华盛顿广场/布鲁克林校区楼宇地图、图书馆自习空位、周边美食推荐及新生选课互助。
+              专为纽约大学国际新生打造的交互式校园生活与导航指南，整合华盛顿广场/布鲁克林楼宇地图、图书馆自习空位、周边美食与选课互助。
             </p>
             <div class="project-tags">
               <span class="project-tag">Vue 3 / Vite</span>
               <span class="project-tag">Tailwind CSS</span>
               <span class="project-tag">TypeScript</span>
-              <span class="project-tag">Interactive Map</span>
+              <span class="project-tag">Leaflet Maps</span>
             </div>
             <div class="project-links">
               <a href="https://github.com/Yuanver1" target="_blank" rel="noopener noreferrer" class="project-link">
@@ -345,13 +359,13 @@
         <!-- Project 2: StudyBuddy NYC Mobile App -->
         <div class="project-card" data-category="mobile">
           <div class="project-img-box">
-            <img src="assets/images/project-2.svg" alt="跨时区自习与习惯追踪 App" class="project-img">
+            <img src="assets/images/project-2.svg" alt="跨时区自习与专注 App" class="project-img">
             <span class="project-badge">移动与设计</span>
           </div>
           <div class="project-body">
             <h3 class="project-title">StudyBud NYC - 留学生自习与专注 App</h3>
             <p class="project-desc">
-              针对跨时区留学生设计的习惯打卡与虚拟自习室应用。支持与国内好友/纽约同学同步专注番茄钟、打卡热力图与跨时区日历转换。
+              针对跨时区留学生设计的习惯打卡与虚拟自习室应用。支持与国内好友及纽约同学同步番茄钟、打卡热力图与跨时区日历转换。
             </p>
             <div class="project-tags">
               <span class="project-tag">Flutter / Dart</span>
@@ -375,11 +389,11 @@
         <!-- Project 3: NYC Metro AI Insight -->
         <div class="project-card" data-category="tools">
           <div class="project-img-box">
-            <img src="assets/images/project-3.svg" alt="纽约地铁出行与实时数据洞察" class="project-img">
+            <img src="assets/images/project-3.svg" alt="纽约地铁出行与实时数据看板" class="project-img">
             <span class="project-badge">AI 与工具</span>
           </div>
           <div class="project-body">
-            <h3 class="project-title">MetroPulse NYC - 纽约地铁实时数据洞察</h3>
+            <h3 class="project-title">MetroPulse NYC - 纽约地铁实时数据看板</h3>
             <p class="project-desc">
               调用 MTA 纽约交通官方实时 API 与天气数据，利用 Python 后端做延误预测与拥挤度可视化，帮助学生规划往返曼哈顿与布鲁克林的最佳通勤路线。
             </p>
@@ -491,7 +505,7 @@
             <span class="skill-chip">Git / GitHub 协作</span>
             <span class="skill-chip">VS Code</span>
             <span class="skill-chip">Linux Shell 基础</span>
-            <span class="skill-chip">Figma (UI 设计)</span>
+            <span class="skill-chip">Figma (UI 原型)</span>
             <span class="skill-chip">LaTeX (论文排版)</span>
             <span class="skill-chip">Notion 知识库</span>
           </div>
@@ -535,7 +549,7 @@
             </div>
             <div>
               <div class="contact-card-title">电子邮箱</div>
-              <a href="mailto:yuanver@nyu.edu" class="contact-card-value">yuanver@nyu.edu / contact</a>
+              <a href="mailto:yuanver@nyu.edu" class="contact-card-value">yuanver@nyu.edu</a>
             </div>
           </div>
 
@@ -554,7 +568,7 @@
               <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </div>
             <div>
-              <div class="contact-card-title">所在地区</div>
+              <div class="contact-card-title">常驻地点</div>
               <div class="contact-card-value">🇺🇸 纽约市 (New York, NY) · 曼哈顿 / 布鲁克林</div>
             </div>
           </div>
@@ -587,19 +601,22 @@
   </section>
 
   <!-- =========================================================================
-       8. Footer Section (页脚与版权)
+       8. Footer Section (页脚与 NYU 校训)
        ========================================================================= -->
   <footer class="footer">
     <div class="container footer-content">
+      <div class="footer-motto">
+        “A Private University in the Public Service · 扎根城市，胸怀世界”
+      </div>
       <div class="footer-links">
         <a href="#hero">首页</a>
         <a href="#about">关于我</a>
-        <a href="#experience">学习经历</a>
-        <a href="#portfolio">作品集</a>
-        <a href="#contact">联系</a>
+        <a href="#experience">求学足迹</a>
+        <a href="#portfolio">精选项目</a>
+        <a href="#contact">联系我</a>
       </div>
       <p class="footer-copy">
-        © 2026 Yuanver · NYU International Freshman · Built with 💜 in NYC.
+        © 2026 Yuanver · New York University (NYU) · Red & Black Editorial Theme.
       </p>
     </div>
   </footer>

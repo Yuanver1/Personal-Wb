@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
   <defs>
     <linearGradient id="p4-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e1e2f" />
-      <stop offset="100%" stop-color="#11111b" />
+      <stop offset="0%" stop-color="#14070a" />
+      <stop offset="100%" stop-color="#08080c" />
     </linearGradient>
     <linearGradient id="term-header" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#313244" />
-      <stop offset="100%" stop-color="#1e1e2e" />
+      <stop offset="0%" stop-color="#2a151b" />
+      <stop offset="100%" stop-color="#14070a" />
     </linearGradient>
     <filter id="p4-shadow" x="-8%" y="-8%" width="116%" height="116%">
-      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.6"/>
     </filter>
   </defs>
 
@@ -18,47 +18,41 @@
   <!-- Code / Terminal Mockup -->
   <g transform="translate(60, 40)" filter="url(#p4-shadow)">
     <!-- Terminal Shell Frame -->
-    <rect width="480" height="300" rx="14" fill="#181825" stroke="#45475a" stroke-width="1.5"/>
+    <rect width="480" height="300" rx="10" fill="#0d0d12" stroke="#3f1a24" stroke-width="1.5"/>
     
     <!-- Title Bar -->
-    <rect width="480" height="38" rx="14" fill="url(#term-header)"/>
+    <rect width="480" height="38" rx="10" fill="url(#term-header)"/>
     <rect y="26" width="480" height="12" fill="url(#term-header)"/>
     
-    <circle cx="22" cy="19" r="6" fill="#f38ba8"/>
-    <circle cx="42" cy="19" r="6" fill="#f9e2af"/>
-    <circle cx="62" cy="19" r="6" fill="#a6e3a1"/>
+    <circle cx="22" cy="19" r="6" fill="#ef4444"/>
+    <circle cx="42" cy="19" r="6" fill="#f59e0b"/>
+    <circle cx="62" cy="19" r="6" fill="#22c55e"/>
     
-    <!-- Terminal Tab title text -->
-    <text x="240" y="24" fill="#a6adc8" font-family="monospace" font-size="12" text-anchor="middle" font-weight="bold">terminal ~ dev-toolkit</text>
+    <text x="240" y="24" fill="#a1a1aa" font-family="monospace" font-size="12" text-anchor="middle" font-weight="bold">terminal ~ freshman-toolkit</text>
 
     <!-- Terminal Content / Code lines -->
     <g transform="translate(25, 65)" font-family="monospace" font-size="13" font-weight="600">
-      <!-- Line 1 -->
-      <text x="0" y="20" fill="#a6e3a1">➜</text>
-      <text x="20" y="20" fill="#89b4fa">~/projects</text>
-      <text x="110" y="20" fill="#cdd6f4">git clone toolkit-cli</text>
+      <text x="0" y="20" fill="#ef4444">➜</text>
+      <text x="20" y="20" fill="#f59e0b">~/nyu-projects</text>
+      <text x="145" y="20" fill="#e4e4e7">git clone freshman-cli</text>
       
-      <!-- Line 2 -->
-      <text x="0" y="50" fill="#a6adc8">[1/4] Resolving packages...</text>
-      <text x="0" y="75" fill="#a6adc8">[2/4] Linking dependencies...</text>
-      <text x="0" y="100" fill="#a6e3a1">✔ Build completed in 240ms!</text>
+      <text x="0" y="50" fill="#71717a">[1/4] Syncing NYU Canvas syllabus...</text>
+      <text x="0" y="75" fill="#71717a">[2/4] Linking Google Calendar...</text>
+      <text x="0" y="100" fill="#22c55e">✔ Deadlines synced &amp; ready!</text>
 
-      <!-- Line 3 Code Block -->
       <g transform="translate(0, 125)">
-        <rect width="430" height="85" rx="8" fill="#11111b" stroke="#313244" stroke-width="1"/>
-        <text x="15" y="25" fill="#f38ba8">const</text>
-        <text x="65" y="25" fill="#89b4fa">engine</text>
-        <text x="125" y="25" fill="#cdd6f4">=</text>
-        <text x="145" y="25" fill="#fab387">createEngine</text>
-        <text x="245" y="25" fill="#cdd6f4">({</text>
-        <text x="35" y="50" fill="#cdd6f4">mode:</text>
-        <text x="85" y="50" fill="#a6e3a1">'ultra-fast'</text>
-        <text x="180" y="50" fill="#cdd6f4">,</text>
-        <text x="195" y="50" fill="#cdd6f4">plugins:</text>
-        <text x="270" y="50" fill="#cdd6f4">[</text>
-        <text x="280" y="50" fill="#f9e2af">CorePlugin</text>
-        <text x="365" y="50" fill="#cdd6f4">]</text>
-        <text x="15" y="72" fill="#cdd6f4">});</text>
+        <rect width="430" height="85" rx="6" fill="#060609" stroke="#27272a" stroke-width="1"/>
+        <text x="15" y="25" fill="#ef4444">const</text>
+        <text x="65" y="25" fill="#f59e0b">nyuSchedule</text>
+        <text x="175" y="25" fill="#e4e4e7">=</text>
+        <text x="195" y="25" fill="#fbbf24">initFreshmanKit</text>
+        <text x="325" y="25" fill="#e4e4e7">({</text>
+        <text x="35" y="50" fill="#e4e4e7">term:</text>
+        <text x="85" y="50" fill="#ef4444">'Fall 2026'</text>
+        <text x="175" y="50" fill="#e4e4e7">,</text>
+        <text x="190" y="50" fill="#e4e4e7">campus:</text>
+        <text x="260" y="50" fill="#fbbf24">'Washington Sq'</text>
+        <text x="15" y="72" fill="#e4e4e7">});</text>
       </g>
     </g>
   </g>
