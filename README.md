@@ -1,88 +1,106 @@
-# Personal-Wb | 个人主页与作品集
+# Yuanver's Personal Portfolio | 纽约大学 (NYU) 个人主页与作品集
 
-这是一个专为个人开发者/设计师打造的现代化、响应式、高颜值个人主页与作品集网页。支持浅色/深色模式一键切换、作品集分类筛选、经历时间轴与移动端适配。
+> **In & of the City, in & of the World.**  
+> 专为纽约大学 (NYU) 国际本科新生定制的现代化、响应式红黑社论风 (Red & Black Editorial Theme) 个人主页与技术作品集。
 
----
-
-## 🌟 页面特色
-
-- **现代视觉设计**：极简美学排版、玻璃拟物 (Glassmorphism) 与平滑滚动动画。
-- **浅色 / 深色主题**：支持一键切换并自动记忆用户偏好，跟随系统深色模式。
-- **全端响应式适配**：在桌面宽屏、平板、手机等各类屏幕尺寸下均有出色的排版与交互体验。
-- **作品集与经历展示**：支持按分类筛选作品卡片（Web、移动端、AI/工具等），附带项目封面、技术标签与源码/预览链接。
-- **零外部繁重依赖**：纯原生 HTML5 / CSS3 / JavaScript 开发，无缝兼容任何静态托管服务。
+[![GitHub License](https://img.shields.io/badge/license-MIT-red.svg)](LICENSE)
+[![NYU Violet Pride](https://img.shields.io/badge/NYU-Class%20of%202030-57068c.svg)](https://www.nyu.edu)
+[![Theme](https://img.shields.io/badge/Theme-Red%20%26%20Black%20Editorial-dc2626.svg)](#)
+[![Responsive](https://img.shields.io/badge/Responsive-Mobile%20%26%20Desktop-black.svg)](#)
 
 ---
 
-## 📁 目录结构
+## 🌟 页面设计特色 (Key Highlights)
+
+- 🏛️ **纽约大学官网社论风 (NYU Editorial Typography)**：引入学术级经典衬线字体 `Playfair Display`，搭配结构化排版标尺与名校刊物级版式。
+- 🎨 **红黑金专属配色 (Crimson, Obsidian & Gold)**：
+  - **曜石黑 (Obsidian Black `#09090d`)**：沉稳大气的暗色底蕴；
+  - **绯红 (Scarlet Red `#ef4444`)**：充满活力与创造力的高亮强调色；
+  - **光环金 (Radiant Gold `#fbbf24`)**：呼应个人像素头像的头顶金光环设计。
+- 📱 **全端极致响应式适配**：完美适配宽屏桌面端、平板以及手机端（支持平滑滑动的折叠汉堡菜单与触控反馈）。
+- 🌓 **双模式主题无缝切换**：支持深色/浅色模式一键切换，并自动记忆用户偏好 (`localStorage`)。
+- ⚡ **零外部繁重框架依赖**：纯原生语义化 HTML5 + 现代化 CSS3 (CSS Variables & Grid) + 原生 JavaScript，毫秒级快速加载。
+
+---
+
+## 🚀 精选作品集介绍 (Featured Projects)
+
+### 1. 🧭 NYU Compass - 国际新生校园与生活助手
+- **分类**：Web 应用 / 校园工具
+- **技术栈**：`Vue 3`, `Vite`, `Tailwind CSS`, `TypeScript`, `Leaflet Maps`
+- **项目描述**：专为纽约大学国际大一新生打造的互动式导航与生活指南。集成华盛顿广场与布鲁克林校区楼宇地图、Bobst 图书馆自习空位实时监测、曼哈顿/布鲁克林周边留学生美食推荐及新生选课互助评教系统。
+
+### 2. 📱 StudyBud NYC - 留学生跨时区自习与专注 App
+- **分类**：移动与设计 / 效率工具
+- **技术栈**：`Flutter`, `Dart`, `Figma (UI/UX)`, `Firebase`
+- **项目描述**：针对跨时区留学生痛点量身打造的虚拟自习室与习惯打卡应用。支持与国内亲友、NYC 同学跨时区同步专注番茄钟，提供习惯热力图统计、自习白噪音与云端日程同步功能。
+
+### 3. 🚇 MetroPulse NYC - 纽约地铁实时数据与出行看板
+- **分类**：AI 与工具 / 数据可视化
+- **技术栈**：`React`, `Python`, `FastAPI`, `MTA Open Data API`, `ECharts`
+- **项目描述**：调用 MTA (Metropolitan Transportation Authority) 官方实时数据与天气 API，利用 Python 进行通勤延误预测与车厢拥挤度可视化，帮助 NYU 同学智能规划往返曼哈顿校区与布鲁克林工程学院的最佳通勤路径。
+
+### 4. 🛠️ Freshman Toolkit - 大一课业与待办提醒 CLI
+- **分类**：AI 与工具 / 开源脚手架
+- **技术栈**：`Node.js`, `TypeScript`, `Commander.js`, `Canvas LMS API`
+- **项目描述**：极简终端效率命令行工具，支持一键对接大学 Canvas 课业大纲拉取作业截止日期 (Deadlines)、自动生成 Markdown 课程复习笔记模板，并与 Google Calendar / Apple 日历双向同步。
+
+---
+
+## 📁 项目目录结构 (Directory Structure)
 
 ```text
-├── index.html              # 网页主入口与内容结构
+Personal-Wb/
+├── index.html              # 主页面结构（语义化 HTML5，包含完整中文/英文注释）
 ├── css/
-│   └── style.css           # 样式表（主题变量、布局、动画与响应式规则）
+│   └── style.css           # 样式表（NYU 红黑系主题变量、毛玻璃拟物、动画与响应式断点）
 ├── js/
-│   └── main.js            # 交互逻辑（主题切换、分类筛选、滚动高亮）
+│   └── main.js            # 交互逻辑（主题切换、作品集分类筛选、滚动高亮、表单提示）
 ├── assets/
-│   ├── images/             # 存放个人照片、头像、作品集封面图等资源
-│   │   ├── avatar.svg      # 默认个人头像
-│   │   ├── project-1.svg   # 示例项目封面 1
-│   │   ├── project-2.svg   # 示例项目封面 2
-│   │   ├── project-3.svg   # 示例项目封面 3
-│   │   └── project-4.svg   # 示例项目封面 4
-└── README.md               # 项目使用与配置说明文档
+│   └── images/             # 页面图像资源
+│       ├── avatar.jpg      # 个人像素头像（带光环装饰）
+│       ├── project-1.svg   # 项目 1 封面（红黑金管理看板）
+│       ├── project-2.svg   # 项目 2 封面（红黑金移动端 App）
+│       ├── project-3.svg   # 项目 3 封面（红黑金数据洞察网络）
+│       └── project-4.svg   # 项目 4 封面（红黑金终端代码界面）
+├── .gitignore              # Git 忽略配置
+└── README.md               # 项目详细说明文档
 ```
 
 ---
 
-## ✏️ 快速自定义指南
+## 💻 本地运行与开发 (Local Development)
 
-### 1. 修改个人介绍与基本信息
-打开 [`index.html`](file:///Users/yuanver/Desktop/wkspace/index.html)：
-- 搜索 `Yuanver` 替换为您自己的姓名或昵称。
-- 在 `<section id="hero">` 和 `<section id="about">` 中修改您的个人标语 (Slogan)、自我介绍段落和核心优势。
-- 在 `<section id="contact">` 中修改您的联系邮箱、GitHub 主页或社交账号。
-
-### 2. 替换个人头像与照片
-- 将您自己的照片放入 `assets/images/` 文件夹（例如 `my-photo.png`）。
-- 打开 [`index.html`](file:///Users/yuanver/Desktop/wkspace/index.html)，找到 `<img src="assets/images/avatar.svg" alt="Yuanver Avatar" class="avatar-img">`，将 `src` 修改为 `assets/images/my-photo.png`。
-
-### 3. 修改经历描述 (Experience)
-- 打开 [`index.html`](file:///Users/yuanver/Desktop/wkspace/index.html)，定位到 `<section id="experience">`。
-- 在 `<div class="timeline-item">` 中修改对应的起止时间、职位/专业名称、公司/学校以及具体工作/学习成果。
-
-### 4. 添加与修改作品集 (Portfolio)
-- 打开 [`index.html`](file:///Users/yuanver/Desktop/wkspace/index.html)，定位到 `<section id="portfolio">`。
-- 每个作品对应一个 `<div class="project-card" data-category="web">`：
-  - `data-category`：所属分类（`web` / `mobile` / `tools`，需与顶部的 filter 按钮对应）。
-  - `<img class="project-img">`：项目封面图路径。
-  - `<h3 class="project-title">`：项目名称。
-  - `<p class="project-desc">`：项目简介与特色。
-  - `<div class="project-tags">`：技术栈标签。
-  - `<a class="project-link">`：替换 `href` 为您真实的 GitHub 仓库链接与在线 Demo 预览地址。
-
----
-
-## 🚀 本地预览与测试
-
-在终端（Terminal）进入当前目录，运行 Python 内置静态服务器：
+克隆仓库并在本地启动轻量静态服务器：
 
 ```bash
-python3 -m http.server 8080
+git clone git@github.com:Yuanver1/Personal-Wb.git
+cd Personal-Wb
+
+# 方式 1: 使用 Python 内置服务
+python3 -m http.server 8888
+
+# 方式 2: 使用任意本地静态工具（如 VS Code Live Server）
 ```
 
-然后在浏览器打开 [http://localhost:8080](http://localhost:8080) 即可实时预览页面。
+在浏览器中访问 [http://localhost:8888](http://localhost:8888) 即可实时预览。
 
 ---
 
-## 🌐 部署到 GitHub Pages（免费上线）
+## 🌐 部署至 GitHub Pages (Deploy to GitHub Pages)
 
-1. 提交并推送代码到您的 GitHub 仓库：
-   ```bash
-   git add .
-   git commit -m "feat: build modern personal portfolio website"
-   git push origin main
-   ```
-2. 进入 GitHub 仓库页面：`https://github.com/Yuanver1/Personal-Wb`。
-3. 点击 **Settings**（设置） > 左侧栏 **Pages**。
-4. 在 **Build and deployment** 下的 **Branch** 选择 `main` 分支，目录选择 `/ (root)`，点击 **Save**。
-5. 稍等 1-2 分钟，即可通过 `https://yuanver1.github.io/Personal-Wb/` 访问您的专属个人网页！
+本项目开箱即用支持 **GitHub Pages** 免费自动化托管：
+
+1. 代码推送到 GitHub 仓库的 `main` 分支；
+2. 进入仓库页面：`https://github.com/Yuanver1/Personal-Wb`；
+3. 点击 **Settings** -> **Pages**；
+4. 在 **Build and deployment** 下的 **Branch** 选择 `main`，目录保持 `/ (root)`，点击 **Save**；
+5. 稍等片刻，即可通过 `https://yuanver1.github.io/Personal-Wb/` 在公网访问您的个人网页！
+
+---
+
+## 📬 联系方式 (Contact)
+
+- **Email**: [yuan1ver1@gmail.com](mailto:yuan1ver1@gmail.com)
+- **GitHub**: [@Yuanver1](https://github.com/Yuanver1)
+- **Location**: New York, NY (Manhattan & Brooklyn)
